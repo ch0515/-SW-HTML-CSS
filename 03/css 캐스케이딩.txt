@@ -1,0 +1,31 @@
+-순서에 의한 캐스케이딩
+Ex)
+<p>Hello World</p>
+
+style.css문서
+p{ color: red;}
+p{ color: black;}
+나중에 적용한 속성값이 우선순위가 높음
+따라서 Hello world는 검정색으로 화면에 출력
+
+-디테일에 의한 캐스케이딩
+Ex)
+<header>
+	<p>Hello World</p>
+</header>
+
+style.css 문서
+header p{ color: red;}
+p{ color: blue;}
+더 구체적으로 작성된 선택자가 우선순위가 높음
+따라서 Hello World는 빨간색으로 화면에 출력
+
+-선택자에 의한 캐스케이딩
+<h3 style="color: pink" id="color" class="color">color</h3>
+
+style.css 문서
+#color{ color:blue;}
+.color{ color: red;}
+h3{ color:green; }
+style > id > class > type 순으로 우선순위가 높음
+따라서 핑크로 화면 출력
